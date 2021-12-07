@@ -9993,29 +9993,7 @@ export type GetDeploymentQueryVariables = Exact<{
 
 export type GetDeploymentQuery = (
   { __typename?: 'Query' }
-  & { getDeployment?: Maybe<(
-    { __typename?: 'V1Deployment' }
-    & Pick<V1Deployment, 'apiVersion' | 'kind'>
-    & { metadata?: Maybe<(
-      { __typename?: 'V1ObjectMeta' }
-      & Pick<V1ObjectMeta, 'name'>
-    )>, spec?: Maybe<(
-      { __typename?: 'V1DeploymentSpec' }
-      & { template: (
-        { __typename?: 'V1PodTemplateSpec' }
-        & { spec?: Maybe<(
-          { __typename?: 'V1PodSpec' }
-          & { containers: Array<Maybe<(
-            { __typename?: 'V1Container' }
-            & Pick<V1Container, 'image'>
-          )>> }
-        )> }
-      ) }
-    )>, status?: Maybe<(
-      { __typename?: 'V1DeploymentStatus' }
-      & Pick<V1DeploymentStatus, 'availableReplicas' | 'unavailableReplicas' | 'updatedReplicas' | 'readyReplicas' | 'replicas'>
-    )> }
-  )> }
+  & { getDeployment?: V1Deployment}
 );
 
 
